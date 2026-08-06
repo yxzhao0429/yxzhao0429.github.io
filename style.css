@@ -305,6 +305,8 @@ img {
   padding: 0.6rem 0.75rem;
   vertical-align: top;
   font-size: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .section-card td:first-child {
@@ -490,10 +492,24 @@ img {
     min-width: auto;
   }
 
-.section-card td:first-child {
-    white-space: normal;
+  .info-list .date + br {
+    display: none;
+  }
+
+  .section-card td:first-child {
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .section-card .mytable td:first-child {
     display: block;
     margin-bottom: 0.25rem;
+  }
+
+  .page-students .mytable td:first-child {
+    max-width: 200px;
+    white-space: normal;
+    word-break: break-word;
   }
 }
 
