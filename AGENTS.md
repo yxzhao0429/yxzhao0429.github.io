@@ -21,14 +21,15 @@ Per-page header conventions (copy, then adjust):
 ## Asset directories
 
 - `images/` — profile photos (`pic.jpg`, `pic2.jpg`, `pic3.jpg`), `favicon/`. Referenced by relative path.
-- `courses/` — syllabus PDFs named `<semester>_<CODE>.pdf` (e.g. `1142_AP1.pdf`; semester = `97`…`114`, `1`/`2` term).
+- `courses/` — syllabus PDFs named `<semester>_<CODE>.pdf` (e.g. `1151_GP3.pdf`; semester = `97`…`115`, `1`/`2` term).
 - `students/` — thesis/project files named `<year>-<n>[-videoM].(pdf|jpg|mp4)`.
 
 ## Conventions
 
-- **Doctype/DOM**: XHTML 1.0 Strict (same as `index.html`). Content is Traditional Chinese; keep `charset=utf-8`.
-- **Section cards**: every section is `.section-card` (fade-in animation). Institution divider cards are bare `<h1>` inside a `.section-card` (e.g. 國立金門大學, 大華技術學院 in `courses.html`).
+- **Doctype/DOM**: XHTML 1.0 Strict (same as `index.html`). Content is Traditional Chinese; keep `charset=utf-8`. Because it's XHTML, void elements are self-closed (`<br />`) and `&` must be `&amp;`.
+- **Section cards**: every section is `.section-card` (fade-in animation). Institution divider cards are bare `<h1>` inside a `.section-card` (e.g. 國立金門大學, 大華技術學院 in both `courses.html` and `students.html`).
 - **Tables**: `class="mytable" cellspacing="1" cellpadding="0" border="1"` in `courses.html`; `border="0"` in `students.html`. Header row uses `<th>`. Course semester sections have `<h2 id="courseXXXX">` anchors; syllabus link text is 進度大綱 and opens `target="_blank"`.
+- **students.html link text**: master's theses link out to external 論文連結 (`https://hdl.handle.net/...`); undergrad projects use local files labeled 專題成果 (pdf/jpg) and 成果展示`N` (mp4, may also be a YouTube link).
 - **Self-citation**: in `publications.html`, the author's own name is marked `<span style="text-decoration: underline;">Y. X. Zhao</span>`.
 - **Inline styles**: dates and spacing use inline `style=` attributes heavily. Maintain this convention.
 - **Responsive**: CSS custom properties with `--max-width: 960px`; breakpoints 768px (hamburger nav) and 480px (smaller fonts). Keep them.
@@ -36,3 +37,7 @@ Per-page header conventions (copy, then adjust):
 ## Template origin
 
 Based on the "astroturfd" Free CSS Templates design (CC Attribution 2.5). Preserve the template comment header at the top of `style.css`.
+
+## Verify changes
+
+No build, tests, or linters. Open `index.html` directly in a browser or run `python -m http.server 8000` in the repo root. Deploy is manual GitHub Pages from `main` (see `README.md`).

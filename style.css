@@ -322,6 +322,10 @@ img {
   font-weight: normal;
 }
 
+.page-students .section-card td {
+  vertical-align: middle;
+}
+
 .section-card tr:last-child td {
   border-bottom: none;
 }
@@ -510,6 +514,7 @@ img {
     max-width: 200px;
     white-space: normal;
     word-break: break-word;
+    border-bottom: none;
   }
 }
 
