@@ -309,19 +309,6 @@ img {
   word-break: break-word;
 }
 
-.section-card td:first-child {
-  white-space: nowrap;
-  font-weight: 600;
-  color: var(--primary);
-  padding-right: 1rem;
-  width: 50px;
-}
-
-.mytable td:first-child {
-  color: inherit;
-  font-weight: normal;
-}
-
 .page-students .section-card td {
   vertical-align: middle;
 }
@@ -498,23 +485,6 @@ img {
 
   .info-list .date + br {
     display: none;
-  }
-
-  .section-card td:first-child {
-    white-space: nowrap;
-    width: auto;
-  }
-
-  .section-card .mytable td:first-child {
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-
-  .page-students .mytable td:first-child {
-    max-width: 200px;
-    white-space: normal;
-    word-break: break-word;
-    border-bottom: none;
   }
 }
 
