@@ -309,6 +309,14 @@ img {
   word-break: break-word;
 }
 
+.page-publications .section-card td:first-child {
+  white-space: nowrap;
+}
+
+.page-courses .section-card td {
+  vertical-align: middle;
+}
+
 .page-students .section-card td {
   vertical-align: middle;
 }
