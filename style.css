@@ -309,6 +309,10 @@ img {
   word-break: break-word;
 }
 
+.page-index .section-card td:first-child {
+  white-space: nowrap;
+}
+
 .page-publications .section-card td:first-child {
   white-space: nowrap;
 }
