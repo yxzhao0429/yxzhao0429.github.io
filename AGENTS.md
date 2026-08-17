@@ -31,7 +31,7 @@ Per-page header conventions (copy, then adjust):
 - **Tables**: `class="mytable" cellspacing="1" cellpadding="0" border="1"` in `courses.html`; `border="0"` in `students.html`. Header row uses `<th>`. Course semester sections have `<h2 id="courseXXXX">` anchors; syllabus link text is 進度大綱 and opens `target="_blank"`.
 - **students.html link text**: master's theses link out to external 論文連結 (`https://hdl.handle.net/...`); undergrad projects use local files labeled 專題成果 (pdf/jpg) and 成果展示`N` (mp4, may also be a YouTube link).
 - **Self-citation**: in `publications.html`, the author's own name is marked `<span style="text-decoration: underline;">Y. X. Zhao</span>` (or `趙于翔` in Chinese-authored entries).
-- **Body hooks**: `courses.html` uses `<body class="page-courses">` (center-aligns `.section-card td` vertically), `publications.html` uses `<body class="page-publications">` (keeps first table column nowrap), and `students.html` uses `<body class="page-students">` (center-aligns `.section-card td` vertically). Only `index.html` keeps a plain `<body>`. The rules live together in `style.css` (~line 312).
+- **Body hooks**: every page uses a `<body class="page-*">` class that scopes CSS rules in `style.css` (~line 312): `page-index` and `page-publications` keep the first table column `nowrap`; `page-courses` and `page-students` center-align `.section-card td` vertically.
 - **Inline styles**: dates and spacing use inline `style=` attributes heavily. Maintain this convention.
 - **Responsive**: CSS custom properties with `--max-width: 960px`; breakpoints 768px (hamburger nav) and 480px (smaller fonts). Keep them.
 
